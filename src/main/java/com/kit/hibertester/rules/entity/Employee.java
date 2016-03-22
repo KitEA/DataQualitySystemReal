@@ -1,4 +1,4 @@
-package com.kit.hibertester.entity;
+package com.kit.hibertester.rules.entity;
 
 /**
  * Created by Eldest on 29.02.2016.
