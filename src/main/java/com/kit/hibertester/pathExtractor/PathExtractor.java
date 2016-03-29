@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * Created by Eldest on 20.03.2016.
+ * Created by Eldest on 26.03.2016.
  */
 public class PathExtractor {
     private Path getResource(String fileName) {

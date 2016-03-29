@@ -15,9 +15,9 @@ public class RulesBoImpl implements RulesBO {
     @Autowired
     private RulesDAO rulesDAO;
 
-    /*public void setRulesDAO(RulesDAO rulesDAO){
+    public void setRulesDAO(RulesDAO rulesDAO){
         this.rulesDAO = rulesDAO;
-    }*/
+    }
 
     @Transactional
     public void save(Rules rules) {

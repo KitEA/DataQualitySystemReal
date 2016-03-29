@@ -1,5 +1,0 @@
-salaryMax
-salary>999
-1
-FROM Employee
-1

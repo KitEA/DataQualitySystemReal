@@ -1,6 +1,9 @@
 package com.kit.hibertester.rules.entity;
 
+import org.hibernate.envers.Audited;
+
 import javax.persistence.*;
+import javax.persistence.Entity;
 
 /**
  * Created by Eldest on 16.03.2016.
@@ -14,10 +17,22 @@ public class Rules {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int rule_Id;
 
+    @Column(name = "name", unique = true, nullable = false)
     private String rule_Name;
+
+    @Column(unique = true, nullable = false)
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "entity_id",
+            foreignKey = @ForeignKey(name = "rule_entity_id_fkey"))
     private int entity_id;
+
     private String query_text;
+
+    @ManyToOne
+    @JoinColumn(name = "section_id",
+            foreignKey = @ForeignKey(name = "rule_section_id_fkey"))
     private int section_id;
 
     public Rules() {}
@@ -26,12 +41,10 @@ public class Rules {
         return rule_Id;
     }
 
-    @Column(name = "name", unique = true, nullable = false)
     public String getRule_Name() {
         return rule_Name;
     }
 
-    @Column(unique = true, nullable = false)
     public String getDescription() {
         return description;
     }
